@@ -1,0 +1,49 @@
+<!-- user-details.component.html -->
+<app-navbar></app-navbar>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<h2>All Users</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Telephone</th>
+      <th>Civilite</th>
+      <th>Adresse</th>
+      <th>Departement</th>
+      <th>Roles</th> <!-- New column for roles -->
+      <!-- Add other user details as needed -->
+      <th>Actions</th> <!-- Add column for actions -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.firstname }}</td>
+      <td>{{ user.lastname }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.telephone }}</td>
+      <td>{{ user.civilite }}</td>
+      <td>{{ user.adresse }}</td>
+      <td>{{ user.departement }}</td>
+      <td>
+        <ul>
+          <li *ngFor="let roleObj of user.authorities">{{ roleObj.authority }}</li>
+        </ul>
+      </td> <!-- Display roles from nested objects -->
+      <!-- Display other user details -->
+      <td>
+        <button (click)="updateUser(user.id, user)">Edit</button>
+        <button (click)="deleteUser(user.id)">Delete</button>
+      </td> <!-- Add buttons for edit and delete actions -->
+    </tr>
+  </tbody>
+</table>

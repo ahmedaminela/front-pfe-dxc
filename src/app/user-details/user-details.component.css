@@ -1,0 +1,50 @@
+/* user-details.component.css */
+
+/* Style for the table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for table header */
+  .table th {
+    padding: 8px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  /* Style for table data */
+  .table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Style for table rows */
+  .table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for table rows on hover */
+  .table tbody tr:hover {
+    background-color: #e5e5e5;
+  }
+  
+  /* Style for ul list */
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Style for li items */
+  li {
+    list-style-type: none;
+  }
+  
+  /* Style for headings */
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
